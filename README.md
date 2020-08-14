@@ -4,7 +4,7 @@
 # 配置：
 
 path:要生成的目录  
-printprogressbar(试验阶段):是否启用进度条(会比平常生成速度慢)  
+printprogressbar:是否启用进度条(会减慢处理速度)  
 t_html:网页上显示目录前面的html [例子](https://github.com/wuhaneduyun/mirrors/blob/master/dhtml/t.html)  
 d_html:网页上显示目录后面的html [例子](https://github.com/wuhaneduyun/mirrors/blob/master/dhtml/d.html)  
 

@@ -11,7 +11,7 @@ d_html:网页上显示目录后面的html [例子](https://github.com/wuhaneduyu
 ```python
 if (('index.html' in path) or ('git' in path) or ('CNAME' in path) or ('.DS_Store' in path) or ('README.md' in path) or ('img' in path) or ('dhtml' in path) or ('json' in path) or ('js' in path) or ('css' in path)):
 ```
-2处！配置要屏蔽的文件名（相对路径也可以，例如mirrors/wuhaneduyun）
+5处！配置要屏蔽的文件名（相对路径也可以，例如mirrors/wuhaneduyun）
 
 
 # 效果：

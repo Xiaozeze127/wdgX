@@ -1,4 +1,4 @@
-# Static-Webpage-fake-catalogue
+# Static site generation directory
 
 静态网页目录生成
 

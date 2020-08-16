@@ -6,17 +6,27 @@ path = "mirrors/"  # Folder Path
 printprogressbar = True  # progress bar (beta)
 t_html = "mirrors/dhtml/t.html"  # t_html path(Please read READEME.md)
 d_html = "mirrors/dhtml/d.html"  # d_html path(Please read READEME.md)
+disable_index = ["index.html","git","CNAME",".DS_Store","README.md","img","json","js","css","dhtml"]
 
 # Init
 filenum = 0
 jd = 0
 
 
+
+def ifwb(basepath):
+    b = False
+    for i in range (0,len(disable_index)):
+        if(disable_index[i] in basepath):
+            b = True
+    return b
+
+
 def gci(filepath):
     global filenum
     for fi in sorted(os.listdir(filepath)):
         fi_d = os.path.join(filepath, fi)
-        if (("index.html" in fi_d) or ('git' in fi_d) or ('CNAME' in fi_d) or ('.DS_Store' in fi_d) or ('README.md' in fi_d) or ('img' in fi_d) or ('dhtml' in fi_d) or ('json' in fi_d) or ('js' in fi_d) or ('css' in fi_d)):  # Folder to mask
+        if (ifwb(fi_d)):
             continue
         elif os.path.isfile(fi_d):
             filenum = filenum + 1
@@ -32,7 +42,7 @@ def chtml(basepath):
     global jd
     for item in sorted(os.listdir(basepath)):
         path = os.path.join(basepath, item)
-        if (('index.html' in path) or ('git' in path) or ('CNAME' in path) or ('.DS_Store' in path) or ('README.md' in path) or ('img' in path) or ('dhtml' in path) or ('json' in path) or ('js' in path) or ('css' in path)):  # Folder to mask
+        if (ifwb(path)):
             continue
         elif os.path.isfile(path):
             modifiedTime = time.localtime(os.stat(path).st_mtime)
@@ -76,7 +86,7 @@ def htop(basepath):
     global jd
     for item in sorted(os.listdir(basepath)):
         path = os.path.join(basepath, item)
-        if (('index.html' in path) or ('git' in path) or ('CNAME' in path) or ('.DS_Store' in path) or ('README.md' in path) or ('img' in path) or ('dhtml' in path) or ('json' in path) or ('js' in path) or ('css' in path)):  # Folder to mask
+        if (ifwb(path)):  # Folder to mask
             continue
         elif os.path.isfile(path):
             indexhtml = open(os.path.dirname(
@@ -141,7 +151,7 @@ def hend(basepath):
                 print(">    ", end=' ')
                 print(str(int((jd * 100 / 3) / filenum)) + "%   ", end=' ')
                 print(str(jd) + "/" + str(filenum * 3), end='\r')
-        elif not(os.path.isfile(path)) and not(('index.html' in path) or ('git' in path) or ('CNAME' in path) or ('.DS_Store' in path) or ('README.md' in path) or ('img' in path) or ('dhtml' in path) or ('json' in path) or ('js' in path) or ('css' in path)):  # Folder to mask
+        elif not(os.path.isfile(path)) and not(ifwb(path)):
             jd += 1
             if printprogressbar:
                 print("<", end='')
@@ -153,7 +163,7 @@ def hend(basepath):
                 print(str(int((jd * 100 / 3) / filenum)) + "%   ", end=' ')
                 print(str(jd) + "/" + str(filenum * 3), end='\r')
             hend(path)
-        elif not(('index.html' in path) or ('git' in path) or ('CNAME' in path) or ('.DS_Store' in path) or ('README.md' in path) or ('img' in path) or ('dhtml' in path) or ('json' in path) or ('js' in path) or ('css' in path)):  # Folder to mask
+        elif not(ifwb(path)):
             jd += 1
             if printprogressbar:
                 print("<", end='')

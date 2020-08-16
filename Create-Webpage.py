@@ -30,10 +30,8 @@ def gci(filepath):
             continue
         elif os.path.isfile(fi_d):
             filenum = filenum + 1
-            print(fi_d)
         else:
             filenum = filenum + 1
-            print(fi_d)
             gci(fi_d)
     return filenum
 

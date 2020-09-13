@@ -6,17 +6,20 @@ path = "mirrors/"  # Folder Path
 printprogressbar = True  # progress bar (beta)
 t_html = "mirrors/dhtml/t.html"  # t_html path(Please read READEME.md)
 d_html = "mirrors/dhtml/d.html"  # d_html path(Please read READEME.md)
-disable_index = ["index.html","git","CNAME",".DS_Store","README.md","img","json","js","css","dhtml"]
+disable_catalog = []
+disable_index = ["index.html", "git", "CNAME", ".DS_Store",
+                 "README.md", "json", "js", "css", "dhtml"]
+disable_catalog = ['img','documents']
+change_title = {'wuhaneduyun': '武汉教育云(疫情)'}
 
 # Init
 filenum = 0
 jd = 0
 
 
-
 def ifwb(basepath):
     b = False
-    for i in range (0,len(disable_index)):
+    for i in range(0, len(disable_index)):
         if(disable_index[i] in basepath):
             b = True
     return b
@@ -47,8 +50,12 @@ def chtml(basepath):
             mTime = time.strftime('%Y-%m-%d %H:%M:%S', modifiedTime)
             indexhtml = open(os.path.dirname(
                 path)+"/index.html", "a+", encoding='UTF-8')
-            indexhtml.write(
-                "<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(' ', '%20')+"\">"+str(os.path.basename(path))+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
+            try:
+                indexhtml.write("<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(
+                    ' ', '%20')+"\">"+str(change_title[os.path.basename(path)])+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
+            except:
+                indexhtml.write("<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(
+                    ' ', '%20')+"\">"+str(os.path.basename(path))+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
             jd += 1
             if printprogressbar:
                 print("<", end='')
@@ -64,9 +71,17 @@ def chtml(basepath):
             mTime = time.strftime('%Y-%m-%d %H:%M:%S', modifiedTime)
             indexhtml = open(os.path.dirname(
                 path)+"/index.html", "a+", encoding='UTF-8')
-            indexhtml.write(
-                "<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(' ', '%20')+"\">"+str(os.path.basename(path))+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
+
             indexhtml.close
+            if not ((os.path.basename(path) in disable_catalog) or (path in disable_catalog)):
+                try:
+                    indexhtml.write(
+                    "<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(' ', '%20')+"\">"+str(change_title[os.path.basename(path)])+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
+                except:
+                    indexhtml.write(
+                    "<tr class=\"tbody\"><td><a class=\"tname\" href=\""+str(os.path.basename(path)).replace(' ', '%20')+"\">"+str(os.path.basename(path))+"</a></td>"+"<td><a class=\"tt\">"+mTime+"</a></td></tr>")
+
+                
             jd += 1
             if printprogressbar:
                 print("<", end='')

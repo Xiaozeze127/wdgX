@@ -14,7 +14,7 @@ console.log(
   chalk.yellow(
     figlet.textSync("wdgX")
   ))
-  
+
 program.on('--help', () => {
   console.log()
   shell.echo("Source code: \033[34mhttps://github.com/Xiaozeze127/wdgX")
@@ -22,9 +22,11 @@ program.on('--help', () => {
 })
 
 program
-  .version(require('../package').version)
+  .version(require('../package').version, '-v, --version')
 program
   .usage('<command>')
   .command('generate', 'Static website directory generation')
-  .alias('g')//命令别名
+  .alias('g')
+  .command('init', 'Init wdgX')
+  .alias('i')
   .parse(process.argv);

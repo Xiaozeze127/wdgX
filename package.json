@@ -29,5 +29,9 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "generate": "wdgX g",
+    "init": "wdgX i"
   }
 }

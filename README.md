@@ -25,16 +25,4 @@ you can see:
   \ V  V / (_| | (_| |/  \ 
    \_/\_/ \__,_|\__, /_/\_\
                 |___/      
-Usage: wdgX <command>
-
-Options:
-  -V, --version   output the version number
-  -h, --help      display help for command
-
-Commands:
-  generate|g      Static website directory generation
-  help [command]  display help for command
-
-Source code: https://github.com/Xiaozeze127/wdgX
-
 ```

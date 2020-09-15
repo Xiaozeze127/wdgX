@@ -57,9 +57,6 @@ async function CheckwdgX() {
     try {
         const packageObj = await fs.readJson('./wdgX-config.json')
         console.log("Already initialized. If you need to build, you need to use \"wdgx g\"")
-
-
-
     } catch (err) {
         file = 'wdgX-config.json'
         writeins(file)

@@ -29,4 +29,6 @@ program
   .alias('g')
   .command('init', 'Init wdgX')
   .alias('i')
+  .command('server', 'Starts a local server. By default, this is at http://localhost:4000/.')
+  .alias('s')
   .parse(process.argv);

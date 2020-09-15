@@ -1,0 +1,33 @@
+{
+  "name": "wdgx",
+  "version": "1.0.0",
+  "description": "Static website directory generation",
+  "main": "./bin/wdgX.js",
+  "bin": {
+    "wdgx": "./bin/wdgX.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiaozeze127/wdgX.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Xiaozeze127",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xiaozeze127/wdgX/issues"
+  },
+  "homepage": "https://github.com/Xiaozeze127/wdgX#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "figlet": "^1.5.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "ora": "^5.1.0",
+    "promise-exec": "^0.1.0",
+    "shelljs": "^0.8.4"
+  }
+}

@@ -6,8 +6,6 @@ I am using JavaScript to rewrite and make it a cli tool. For previous versions o
 
 # Install
 
-##Install from the command line:
-
 ```shell
 npm install @xiaozeze127/wdgx@0.0.1 -g
 ```

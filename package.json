@@ -1,15 +1,12 @@
 {
-  "name": "wdgx",
+  "name": "@Xiaozeze127/wdgx",
   "version": "0.0.1",
   "description": "Static website directory generation",
   "main": "./bin/wdgX.js",
   "bin": {
     "wdgx": "./bin/wdgX.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Xiaozeze127/wdgX.git"
-  },
+  "repository": "git://github.com/Xiaozeze127/wdgX.git",
   "keywords": [
     "website"
   ],
@@ -29,5 +26,8 @@
     "ora": "^5.1.0",
     "promise-exec": "^0.1.0",
     "shelljs": "^0.8.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

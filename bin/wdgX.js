@@ -17,7 +17,7 @@ console.log(
   
 program.on('--help', () => {
   console.log()
-  shell.echo("Source code: \033[34mhttps://github.com/Xiaozeze127/Static-site-generation-directory")
+  shell.echo("Source code: \033[34mhttps://github.com/Xiaozeze127/wdgX")
   console.log()
 })
 

@@ -7,7 +7,7 @@ I am using JavaScript to rewrite and make it a cli tool. For previous versions o
 # Install
 
 ```shell
-npm install @xiaozeze127/wdgx -g
+npm install wdgx -g
 ```
 
 then you can use in shell

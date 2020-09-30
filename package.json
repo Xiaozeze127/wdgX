@@ -1,10 +1,10 @@
 {
   "name": "wdgx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Static website directory generation",
-  "main": "./bin/wdgX.js",
+  "main": "./bin/wdgX",
   "bin": {
-    "wdgx": "./bin/wdgX.js"
+    "wdgx": "./bin/wdgX"
   },
   "repository": "git://github.com/Xiaozeze127/wdgX.git",
   "keywords": [

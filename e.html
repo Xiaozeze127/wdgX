@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?a8c457e1ce9b153cc48f918dda361bdf";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title id='htitle'>Maftert开源镜像站</title>
+
+    <link rel="shortcut icon" href="/img/logo.png">
+</head>
+
+<style>
+    @font-face {
+        font-family: 'iconfont';
+        /* project id 1954270 */
+        src: url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.eot');
+        src: url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.woff2') format('woff2'), url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.woff') format('woff'), url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.ttf') format('truetype'), url('https://at.alicdn.com/t/font_1954270_geqnjlzaru6.svg#iconfont') format('svg');
+    }
+
+    @media (prefers-color-scheme: light) {
+        a {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #313131;
+        }
+
+        p {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #313131;
+        }
+
+        li {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #313131
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: "Lato", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        a {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #c4c4c4;
+        }
+
+        p {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #c4c4c4;
+        }
+
+        li {
+            text-decoration: none;
+            font-family: "iconfont" !important;
+            color: #c4c4c4;
+        }
+
+        body {
+            background-color: #222;
+            font-family: "Lato", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+        }
+    }
+
+    @media screen and (orientation: portrait) {
+        .header {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .newsfont {
+            font-size: 75px;
+            text-align: left;
+            width: 500px;
+        }
+
+        .downloads {
+            font-size: 50px;
+            text-align: left;
+        }
+
+        .nnname {
+            font-size: 60px;
+        }
+
+        .notice {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .footer {
+            padding-top: 30px;
+            margin-top: 100px;
+            display: block;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgb(62, 81, 164);
+            padding-bottom: 60px;
+            overflow: hidden;
+        }
+
+        .footc {
+            font-size: 50px;
+            text-align: left;
+            margin-left: 100px;
+            color: #fff;
+        }
+
+        .listc {
+            font-size: 35px;
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .list {
+            text-align: left;
+            width: auto;
+            font-size: 35px;
+        }
+
+        .tname {
+            color: #6793cf;
+            font-size: 30px;
+            transition: color 1s;
+        }
+
+        .tname:hover {
+            color: #4c85b7;
+        }
+
+        .tt {
+            font-size: 30px;
+        }
+
+        .downloadsb {
+            font-size: 50px;
+            margin-top: 10px;
+            background-color: #4c85b7;
+            border-color: #739fc6;
+            border: 4px solid transparent;
+            border-radius: 4px;
+            padding: 6px 12px;
+            width: 350px;
+        }
+
+        .button {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 75px;
+            transition: color 1s;
+        }
+
+        .headerfont {
+            top: 150px;
+            right: 80px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 25px;
+            padding-top: 50px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+            border-bottom: 5px solid #82318E;
+        }
+
+        .headerfontb {
+            top: 150px;
+            right: 310px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+        }
+
+        .headerfontc {
+            top: 150px;
+            right: 230px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 25px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+        }
+
+        .neirong {
+            text-decoration: none;
+            font-weight: 900;
+            margin-left: 75px;
+            margin-top: 100px;
+        }
+
+        .neirong {
+            text-decoration: none;
+            font-weight: 900;
+            margin-left: 75px;
+            margin-top: 75px;
+        }
+
+        .news {
+            text-decoration: none;
+            font-weight: 900;
+            margin-top: 130px;
+            margin-left: 100px;
+        }
+
+        .footimg {
+            margin-top: 100px;
+            height: 750px;
+            text-align: center;
+        }
+
+        .logo {
+            height: 1em;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .lu {
+            font-size: 50px;
+            width: 300px;
+            text-align: left;
+            border-bottom: 5px solid #353533;
+        }
+
+        .nname {
+            font-size: 50px;
+            width: 500px;
+            text-align: left;
+            border-bottom: 5px solid #353535;
+        }
+
+        @media (prefers-color-scheme: light) {
+            .button:hover {
+                color: #000;
+            }
+
+            .headerfont:hover {
+                color: #000;
+            }
+
+            .headerfontb:hover {
+                color: #000;
+            }
+
+            .headerfontc:hover {
+                color: #000;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .nname {
+                border-bottom: 5px solid #ddd;
+                color: #c4c4c4;
+            }
+
+            .lu {
+                border-bottom: 5px solid #ddd;
+                color: #c4c4c4;
+            }
+
+            .button:hover {
+                color: #ffffff;
+            }
+
+            .headerfont:hover {
+                color: #ffffff;
+            }
+
+            .headerfontb:hover {
+                color: #ffffff;
+            }
+
+            .headerfontc:hover {
+                color: #ffffff;
+            }
+
+            .logo {
+                -webkit-filter: invert(1);
+                filter: invert(1);
+            }
+        }
+    }
+
+    @media screen and (orientation: landscape) {
+        .header {
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .newsfont {
+            font-size: 25px;
+            text-align: left;
+            width: 200px;
+        }
+
+        .nnname {
+            font-size: 25px;
+        }
+
+        .notice {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .downloads {
+            font-size: 14px;
+            text-align: left;
+            width: 200px;
+        }
+
+        .footer {
+            width: auto;
+            padding-top: 30px;
+            margin-top: -1000px;
+            display: block;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgb(62, 81, 164);
+            padding-bottom: 60px;
+            overflow: hidden;
+            clear: both;
+            /* 清除浮动元素格式 */
+            position: relative;
+            margin-top: -200px;
+            /* Footer 高度的负值 */
+            height: auto;
+        }
+
+        .listc {
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .downloadsb {
+            margin-top: 10px;
+            background-color: #4c85b7;
+            border-color: #739fc6;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 6px 12px;
+            width: 110px;
+        }
+
+        .list {
+            text-align: left;
+            width: 250px;
+        }
+
+        .news {
+            text-decoration: none;
+            font-weight: 900;
+            margin-top: 50px;
+            width: 33%;
+            box-sizing: border-box;
+            color: rgb(221, 221, 221);
+            color-scheme: light dark;
+            display: block;
+            float: left;
+            font-family: Lato, "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", 微软雅黑, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            margin-right: 0px;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+        }
+
+        .neirong {
+            text-decoration: none;
+            font-weight: 900;
+            margin-left: 125px;
+            margin-top: 50px;
+            box-sizing: border-box;
+            color-scheme: light dark;
+            display: block;
+            float: left;
+            font-family: Lato, "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", 微软雅黑, sans-serif;
+            line-height: 20px;
+            margin-bottom: 50px;
+            margin-right: 0px;
+            min-height: 0.009999999776482582%;
+            overflow-x: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+        }
+
+        .footc {
+            font-size: 20px;
+            text-align: left;
+            margin-left: 100px;
+            color: #fff;
+        }
+
+        .tname {
+            color: #6793cf;
+            font-size: 17px;
+            transition: color 1s;
+        }
+
+        .tname:hover {
+            color: #4c85b7;
+        }
+
+        .tt {
+            font-size: 17px;
+        }
+
+        .headerfontc {
+            right: 190px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+            border-bottom: 0px solid #82318E;
+        }
+
+        .headerfontb {
+            right: 240px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+            border-bottom: 0px solid #82318E;
+        }
+
+        .headerfont {
+            right: 100px;
+            position: absolute;
+            text-decoration: none;
+            transition: color 1s;
+            font-weight: 700;
+            font-size: 14px;
+            border-bottom: 2px solid #82318E;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding: 15px 10px;
+        }
+
+        .button {
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 30px;
+            transition: color 1s;
+        }
+
+        .footimg {
+            margin-top: -100px;
+            height: 250px;
+            text-align: center;
+        }
+
+        .logo {
+            height: 50px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .lu {
+            font-size: 17px;
+            width: calc(100vw / 5);
+            text-align: left;
+            border-bottom: 2px solid #000;
+        }
+
+        .nname {
+            font-size: 17px;
+            width: calc(100vw / 3.5);
+            text-align: left;
+            border-bottom: 2px solid #000;
+        }
+
+        @media (prefers-color-scheme: light) {
+
+            .headerfontc:hover {
+                color: #000;
+            }
+
+            .headerfontb:hover {
+                color: #000;
+            }
+
+            .headerfont:hover {
+                color: #000;
+            }
+
+            .button:hover {
+                color: #000;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .lu {
+                color: #c4c4c4;
+                border-bottom: 2px solid #ddd;
+            }
+
+            .nname {
+                color: #c4c4c4;
+                border-bottom: 2px solid #ddd;
+            }
+
+            .headerfontc:hover {
+                color: #ffffff;
+            }
+
+            .headerfontb:hover {
+                color: #ffffff;
+            }
+
+            .headerfont:hover {
+                color: #ffffff;
+            }
+
+            .button:hover {
+                color: #ffffff;
+            }
+
+            .logo {
+                -webkit-filter: invert(1);
+                filter: invert(1);
+            }
+        }
+    }
+</style>
+
+<body id="body" style="margin-top: 0px; margin-left: 0px; margin-right: 0px;">
+    <div class="header">
+        <span>
+            <a class="button" href='/' id="title">
+                <picture><img class="logo" src="/img/logo.png"></picture>
+                Maftert开源镜像站
+            </a>
+        </span>
+        <thead>
+            <a class="headerfontb" href="https://live.maftertstudio.com/blog" target="_blank">BLOG</a>
+            <a class="headerfontc" href="https://live.maftertstudio.com" target="_blank">LIVE</a>
+            <a class="headerfont" href="https://mirrors.maftertstudio.com">MIRRORS</a>
+        </thead>
+    </div>
+    <div>
+        <div class="neirong">
+            <p class="notice">本站仅收集链接，不做储存，也并非真正意义上的镜像站</p>
+            <p class="notice">本站仅想挽回即将消失的资源</p>
+            <p class="nnname">&#xe61a;镜像列表</p>
+            <table class="table">
+                <thead>
+                    <th class="nname">Name</th>
+                    <th class="lu">Last Update</th>
+                </thead>
+                <tbody id="filelist">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="news">
+            <p class="newsfont">&#xe62d; 新闻公告</p>
+            <div class="list">
+                <li>8.13 修复含空格的链接</li>
+                <li>8.13 将主题应用到所有页面</li>
+                <li>7.20 增加白色主题</li>
+                <li>7.19 更改主题样式</li>
+                <li>7.19 收录“武汉教育云”</li>
+                <li>7.16 本镜像站开放</li>
+            </div>
+            <p class="newsfont">&#xe611; 资源下载</p>
+            <p class="downloads">一些日常所需资源</p>
+            <button type="button" class="downloadsb">
+                <a style="color:white;" href="https://maftert.gitee.io/downloads" target="_blank">
+                    获取下载地址
+                </a>
+            </button>
+            <p class="newsfont">相关链接</p>
+            <div class="list">
+                <li><a style="color: #6793cf;" href="https://github.com/Xiaozeze127/Static-site-generation-directory"
+                        target="_blank">静态网站目录生成(本网站源代码)</a></li>
+                <li><a style="color: #6793cf;" href="https://maftert.gitee.io" target="_blank">Xiaozeze127的blog(CN)</a>
+                </li>
+                <li><a style="color: #6793cf;" href="https://randlandsta.maftertstudio.com"
+                        target="_blank">RandLand的blog</a></li>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p class="footc">本站由MaftertStudio运行维护。</p>
+        <span class="footc" id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <br>
+        <span class="footc" id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
+        <p class="footc">Contact Us:</p>
+        <div class="listc">
+            <!--<li>
+                <a style="color: #6793cf;" href="https://github.com/xiaozeze127" target="_blank">Github</a>
+            </li>-->
+            <li>
+                <a style="color: #6793cf;" href="mailto:support@maftertstudio.com" target="_blank">Email</a>
+            </li>
+        </div>
+        <div align="center">
+            <picture><img class="footimg" src="/img/logowt.png"></picture>
+        </div>
+    </div>
+</body>
+<script>
+    var tp = window.location.pathname;
+    var title = document.getElementById("title");
+    title.innerHTML += ' - ' + tp
+    var htitle = document.getElementById("htitle");
+    htitle.innerHTML += ' - ' + tp
+
+
+    var sn = [
+        "武汉", "photo"
+    ]
+    var su = [
+        "wuhaneduyun", "img"
+    ];
+    var st = [
+        "hhh", "hhh"
+    ];
+    var tbody = document.getElementById("filelist");
+    for (i = 0; i < sn.length(); i++) {
+        tbody.innerHTML += '<td><a class="tname" href="' + su[i] + '">' + sn[i] + '</a></td><td><a class="tt">' + st[i] + '</a></td>'
+    }
+
+</script>

@@ -120,7 +120,7 @@ You need the following:
 
 This is the file directory section, id must be filelist
 
-[example:](./example.html)
+[example:](https://github.com/Xiaozeze127/wdgX/blob/master/example.html)
 
 [example website:](https://mirrors.maftertstudio.com)
 

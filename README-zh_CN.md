@@ -120,7 +120,7 @@ disable_catalog 相当于隐藏文件
 
 这是存放目录的html元素, id必须为filelist
 
-[示例:](./example.html)
+[示例:](https://github.com/Xiaozeze127/wdgX/blob/master/example.html)
 
 [示例网站:](https://mirrors.maftertstudio.com)
 

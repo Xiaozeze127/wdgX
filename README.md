@@ -11,6 +11,7 @@ It's like a mirror station
 - [wdgX](#wdgx)
   - [Install](#install)
   - [Config](#config)
+    - [pd](#pd)
     - [Differences between cttp and hcttp](#differences-between-cttp-and-hcttp)
       - [cttp](#cttp)
       - [hcttp](#hcttp)
@@ -37,9 +38,20 @@ If you want to reinitialize, please enter "wdgx -i -f"
 ```json
 {
     "path": "./", // Folder to use
-    "printprogressbar": true, // Whether to show progress(Abandonment)
-    "cttp": true, // Whether to change the website title
-    "hcttp": true, // Whether to change the page title
+    "suffix": "html", // file extension
+    "cttp": [ // Whether to change the website title, see below
+        {
+            "YN": true, // Y/N
+            "id": "title" // id
+        }
+    ],
+    "hcttp": [ // Whether to change the page title,see below
+        {
+            "YN": true, // Y/N
+            "id": "htitle" //id
+        }
+    ],
+    "pd": true, // Display upper level folder
     "e_html": "./e.html", // Basic HTML
     "disable_index": [ // Do not generate these files to web pages
         "index.html",
@@ -70,6 +82,14 @@ If you want to reinitialize, please enter "wdgx -i -f"
 }
 ```
 
+### pd
+
+means Parent directory
+
+effect:
+
+![effect](img/4-1.png)
+
 ### Differences between cttp and hcttp
 
 #### cttp
@@ -88,11 +108,25 @@ If you want to reinitialize, please enter "wdgx -i -f"
 
 ![cttp](img/3-1.png)
 
-use id="title"
+```json
+"cttp": [
+      {
+          "YN": true,
+          "id": "title"
+      }
+  ],
+```
 
 ![hcttp](img/3-2.png)
 
-use id="htitle"
+```json
+"hcttp": [
+      {
+          "YN": true,
+          "id": "htitle"
+      }
+  ],
+```
 
 ### disable_index and disable_catalog
 
@@ -123,6 +157,14 @@ This is the file directory section, id must be filelist
 [example:](https://github.com/Xiaozeze127/wdgX/blob/master/example.html)
 
 [example website:](https://mirrors.maftertstudio.com)
+
+The directory name must be in the "tname" style, time has to be in "tt" style
+
+Because html is:
+
+```html
+<td><a class="tname" href="">Name</a></td><td><a class="tt">Time</a></td>
+```
 
 ## generation
 

@@ -1,6 +1,6 @@
 {
   "name": "wdgx",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Static website directory generation",
   "main": "./bin/wdgX",
   "bin": {
@@ -26,6 +26,7 @@
     "inquirer": "^7.3.3",
     "ora": "^5.1.0",
     "promise-exec": "^0.1.0",
+    "request": "^2.88.2",
     "secure-compare": "^3.0.1",
     "shelljs": "^0.8.4",
     "union": "^0.5.0"

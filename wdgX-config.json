@@ -1,0 +1,54 @@
+{
+    "path": "./",
+    "suffix": "html",
+    "cttp": false,
+    "hcttp": false,
+    "pd": true,
+    "e_html": "./e.html",
+    "liststyle":{
+        "Name": "tname",
+        "date": "tt"
+    },
+    "disable_index": [
+        "index.html",
+        ".git",
+        "CNAME",
+        ".DS_Store",
+        "README.md",
+        "json",
+        "e.html",
+        "js",
+        "css",
+        "node_modules",
+        "package.json",
+        "package-lock.json",
+        "LICENSE",
+        ".gitignore",
+        "wdgX-config.json"
+    ],
+    "disable_catalog": [
+        "img",
+        "documents"
+    ],
+    "change_title": {
+        "img": "photos"
+    },
+    "markdown": {
+        "YN": true,
+        "layout": false,
+        "title": {
+            "title": "Maftert音乐站",
+            "cttp": true
+        },
+        "img": {
+            "img": false,
+            "file": "/img/background.png"
+        },
+        "tags": false,
+        "date": false,
+        "updated": false,
+        "comments": false,
+        "categories": false,
+        "permalink": false
+    }
+}

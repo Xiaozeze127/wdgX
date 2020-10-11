@@ -1,6 +1,6 @@
 {
   "name": "wdgx",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "Static website directory generation",
   "main": "./bin/wdgX",
   "bin": {

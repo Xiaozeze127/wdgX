@@ -14,6 +14,7 @@ It's like a mirror station
     - [1.6](#16)
     - [1.5](#15)
     - [1.4](#14)
+    - [wdg3.1 to wdgX 1.0](#wdg31-to-wdgx-10)
   - [Install](#install)
   - [Config](#config)
     - [liststyle](#liststyle)
@@ -42,7 +43,16 @@ Change cttp, hcttp and change_title collocation method
 
 Supports changing suffixes (for example, can be index.html It can also be index.md )  
 Support the ID of custom website and page title (cttp and hcttp)  
-Support display and return to upper level folder  
+Support display and return to upper level folder 
+
+### wdg3.1 to wdgX 1.0
+
+![300X](img/300x.png)
+
+300 times faster!
+
+wdg3.1 uses python, wdgX uses JavaScript  
+And wdgX supports the command line
 
 ## Install
 

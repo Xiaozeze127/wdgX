@@ -3,6 +3,7 @@
 [![NPM Version](http://img.shields.io/npm/v/wdgx.svg?style=flat)](https://www.npmjs.org/package/wdgx)
 [![NPM Downloads](https://img.shields.io/npm/dm/wdgx.svg?style=flat)](https://npmcharts.com/compare/wdgx?minimal=true)
 [![Install Size](https://packagephobia.now.sh/badge?p=wdgx)](https://packagephobia.now.sh/result?p=wdgx)
+[![GitHub](https://img.shields.io/github/license/xiaozeze127/wdgX)](https://github.com/xiaozeze127/wdgX)
 
 Static website directory generation
 

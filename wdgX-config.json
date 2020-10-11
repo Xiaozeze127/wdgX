@@ -37,7 +37,7 @@
         "YN": true,
         "layout": false,
         "title": {
-            "title": "Maftert音乐站",
+            "title": false,
             "cttp": true
         },
         "img": {

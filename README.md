@@ -10,6 +10,7 @@ It's like a mirror station
 
 - [wdgX](#wdgx)
   - [Version](#version)
+    - [1.6](#16)
     - [1.5](#15)
     - [1.4](#14)
   - [Install](#install)
@@ -26,6 +27,10 @@ It's like a mirror station
   - [Start Server](#start-server)
 
 ## Version
+
+### 1.6
+
+Support custom list style
 
 ### 1.5
 

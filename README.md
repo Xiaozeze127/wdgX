@@ -9,6 +9,9 @@ Static website directory generation
 It's like a mirror station
 
 - [wdgX](#wdgx)
+  - [Version](#version)
+    - [1.5](#15)
+    - [1.4](#14)
   - [Install](#install)
   - [Config](#config)
     - [pd](#pd)
@@ -20,6 +23,19 @@ It's like a mirror station
     - [e.html](#ehtml)
   - [generation](#generation)
   - [Start Server](#start-server)
+
+## Version
+
+### 1.5
+
+Support hexo  
+Change cttp, hcttp and change_title collocation method  
+
+### 1.4
+
+Supports changing suffixes (for example, can be index.html It can also be index.md )  
+Support the ID of custom website and page title (cttp and hcttp)  
+Support display and return to upper level folder  
 
 ## Install
 
@@ -39,18 +55,8 @@ If you want to reinitialize, please enter "wdgx -i -f"
 {
     "path": "./", // Folder to use
     "suffix": "html", // file extension
-    "cttp": [ // Whether to change the website title, see below
-        {
-            "YN": true, // Y/N
-            "id": "title" // id
-        }
-    ],
-    "hcttp": [ // Whether to change the page title,see below
-        {
-            "YN": true, // Y/N
-            "id": "htitle" //id
-        }
-    ],
+    "cttp": "title", // Whether to change the website title, see below
+    "hcttp": "htitle", // Whether to change the page title,see below
     "pd": true, // Display upper level folder
     "e_html": "./e.html", // Basic HTML
     "disable_index": [ // Do not generate these files to web pages
@@ -74,11 +80,27 @@ If you want to reinitialize, please enter "wdgx -i -f"
         "img",
         "documents"
     ],
-    "change_title": [ // Switch the names of these files
-        {
-            "img": "photos"
-        }
-    ]
+    "change_title":{  // Switch the names of these files
+        "img": "photos"
+    },
+    "markdown": { // Blog function(Hexo) https://hexo.io/docs/front-matter
+        "YN": false, // Whether to enable markdown parameter
+        "layout": false, // false or "string"
+        "title": {
+            "title": false, // false or "string"
+            "cttp": false // false or "string"     Whether to change the website title
+        },
+        "img": {
+            "img": false, // false or "string"
+            "file": "/img/background.png" // "string"
+        },
+        "tags": false, // false or "string"
+        "date": false, // false or "string"
+        "updated": false, // false or true or "string" (If true, the current time is used)
+        "comments": false, // false or "string"
+        "categories": false, // false or "string"
+        "permalink": false // false or "string"
+    }
 }
 ```
 
@@ -109,23 +131,25 @@ effect:
 ![cttp](img/3-1.png)
 
 ```json
-"cttp": [
-      {
-          "YN": true,
-          "id": "title"
-      }
-  ],
+{
+    "cttp": "title",
+}
+// If you don't want to use it
+{
+    "cttp": false
+}
 ```
 
 ![hcttp](img/3-2.png)
 
 ```json
-"hcttp": [
-      {
-          "YN": true,
-          "id": "htitle"
-      }
-  ],
+{
+    "hcttp": "htitle"
+}
+// If you don't want to use it
+{
+    "hcttp": false
+}
 ```
 
 ### disable_index and disable_catalog

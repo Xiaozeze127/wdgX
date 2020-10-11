@@ -14,6 +14,7 @@ It's like a mirror station
     - [1.4](#14)
   - [Install](#install)
   - [Config](#config)
+    - [liststyle](#liststyle)
     - [pd](#pd)
     - [Differences between cttp and hcttp](#differences-between-cttp-and-hcttp)
       - [cttp](#cttp)
@@ -59,6 +60,10 @@ If you want to reinitialize, please enter "wdgx -i -f"
     "hcttp": "htitle", // Whether to change the page title,see below
     "pd": true, // Display upper level folder
     "e_html": "./e.html", // Basic HTML
+    "liststyle":{ // style for list, see below
+        "Name": "tname", // name css style
+        "date": "tt" // time css style
+    },
     "disable_index": [ // Do not generate these files to web pages
         "index.html",
         ".git",
@@ -102,6 +107,34 @@ If you want to reinitialize, please enter "wdgx -i -f"
         "permalink": false // false or "string"
     }
 }
+```
+
+### liststyle
+
+```html
+<td><a class="tname" href="">name</a></td><td><a class="tt">time</a></td>
+```
+
+This is the HTML added to the list
+
+Now the file name uses the css "tname'  
+the file last update time uses the css "tt'
+
+You can customize it (We require it to be filled in),like:
+
+```json
+{
+    "liststyle":{
+        "Name": "filename",
+        "date": "filetime"
+    },
+}
+```
+
+HTML will become 
+
+```html
+<td><a class="filename" href="">name</a></td><td><a class="filetime">time</a></td>
 ```
 
 ### pd

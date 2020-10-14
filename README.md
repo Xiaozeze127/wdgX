@@ -236,14 +236,6 @@ This is the file directory section, id must be filelist
 
 [example website:](https://mirrors.maftertstudio.com)
 
-The directory name must be in the "tname" style, time has to be in "tt" style
-
-Because html is:
-
-```html
-<td><a class="tname" href="">Name</a></td><td><a class="tt">Time</a></td>
-```
-
 ## generation
 
 Find the generate "wdgx-config.json" folder

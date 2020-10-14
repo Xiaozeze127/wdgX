@@ -11,6 +11,7 @@ It's like a mirror station
 
 - [wdgX](#wdgx)
   - [Version](#version)
+    - [3.0](#30)
     - [1.6](#16)
     - [1.5](#15)
     - [1.4](#14)
@@ -29,6 +30,10 @@ It's like a mirror station
   - [Start Server](#start-server)
 
 ## Version
+
+### 3.0
+
+you can use 'wdgx -c' to clear all web pages (i.e index.html )
 
 ### 1.6
 

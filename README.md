@@ -28,6 +28,7 @@ It's like a mirror station
     - [e.html](#ehtml)
   - [generation](#generation)
   - [Start Server](#start-server)
+  - [clean index.html](#clean-indexhtml)
 
 ## Version
 
@@ -48,7 +49,7 @@ Change cttp, hcttp and change_title collocation method
 
 Supports changing suffixes (for example, can be index.html It can also be index.md )  
 Support the ID of custom website and page title (cttp and hcttp)  
-Support display and return to upper level folder 
+Support display and return to upper level folder
 
 ### wdg3.1 to wdgX 1.0
 
@@ -152,7 +153,7 @@ You can customize it (We require it to be filled in),like:
 }
 ```
 
-HTML will become 
+HTML will become
 
 ```html
 <td><a class="filename" href="">name</a></td><td><a class="filetime">time</a></td>
@@ -232,9 +233,9 @@ You need the following:
 
 This is the file directory section, id must be filelist
 
-[example:](https://github.com/Xiaozeze127/wdgX/blob/master/example.html)
+[example.html](https://github.com/Xiaozeze127/wdgX/blob/master/example.html)
 
-[example website:](https://mirrors.maftertstudio.com)
+[example website](https://mirrors.maftertstudio.com)
 
 ## generation
 
@@ -257,10 +258,10 @@ wdgx -s
 
               _      __  __
  __      ____| | __ _\ \/ /
- \ \ /\ / / _` |/ _` |\  / 
-  \ V  V / (_| | (_| |/  \ 
+ \ \ /\ / / _` |/ _` |\  /
+  \ V  V / (_| | (_| |/  \
    \_/\_/ \__,_|\__, /_/\_\
-                |___/      
+                |___/
 Starting up http-server, serving ./
 Available on:
   http://127.0.0.1:4000
@@ -269,3 +270,7 @@ Hit CTRL-C to stop the server
 ```
 
 For more help on "wdgx -s", please enter "wdgx -s -h"
+
+## clean index.html
+
+If you want to move the folder to other places and there are a lot of files, you can use "wdgx -c" to clear all web pages (excluding disable)_ After the move, you can use "wdgx -g" to regenerate

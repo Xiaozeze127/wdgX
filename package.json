@@ -1,6 +1,6 @@
 {
   "name": "wdgx",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Static website directory generation",
   "main": "./bin/wdgX",
   "bin": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Xiaozeze127/wdgX#readme",
   "dependencies": {
     "bluebird": "^3.7.2",
+    "child_process": "^1.0.2",
     "commander": "^6.1.0",
     "figlet": "^1.5.0",
     "fs-extra": "^9.0.1",

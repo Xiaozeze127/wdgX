@@ -11,6 +11,7 @@ It's like a mirror station
 
 - [wdgX](#wdgx)
   - [Version](#version)
+    - [4.0](#40)
     - [3.0](#30)
     - [1.6](#16)
     - [1.5](#15)
@@ -18,12 +19,8 @@ It's like a mirror station
     - [wdg3.1 to wdgX 1.0](#wdg31-to-wdgx-10)
   - [Install](#install)
   - [Config](#config)
-    - [liststyle](#liststyle)
     - [pd](#pd)
-    - [Differences between cttp and hcttp](#differences-between-cttp-and-hcttp)
-      - [cttp](#cttp)
-      - [hcttp](#hcttp)
-      - [How to config cttp and hcttp](#how-to-config-cttp-and-hcttp)
+    - [changewebsitetitle](#changewebsitetitle)
     - [disable_index and disable_catalog](#disable_index-and-disable_catalog)
     - [e.html](#ehtml)
   - [generation](#generation)
@@ -31,6 +28,14 @@ It's like a mirror station
   - [clean index.html](#clean-indexhtml)
 
 ## Version
+
+### 4.0
+
+wdgx4.0 is three times faster than wdgx3.0! 1000 times faster than wdg3.1!
+
+cttp and hcttp -> changewebsitetitle , Support numerous html id [(details)](#changewebsitetitle)
+
+Supports HTML for custom lists
 
 ### 3.0
 
@@ -78,14 +83,12 @@ If you want to reinitialize, please enter "wdgx -i -f"
 {
     "path": "./", // Folder to use
     "suffix": "html", // file extension
-    "cttp": "title", // Whether to change the website title, see below
-    "hcttp": "htitle", // Whether to change the page title,see below
+    "changewebsitetitle": [ // Whether to change the website title, see below
+        "direct" //html id
+    ],
     "pd": true, // Display upper level folder
     "e_html": "./e.html", // Basic HTML
-    "liststyle":{ // style for list, see below
-        "Name": "tname", // name css style
-        "date": "tt" // time css style
-    },
+    "html": "<td><a class=\"filename\" href=\"{0}\"> {1} '</a></td><td><a class=\"mtime\">'{2}'</a></td>", //HTML for custom lists
     "disable_index": [ // Do not generate these files to web pages
         "index.html",
         ".git",
@@ -101,7 +104,10 @@ If you want to reinitialize, please enter "wdgx -i -f"
         "package-lock.json",
         "LICENSE",
         ".gitignore",
-        "wdgX-config.json"
+        "wdgX-config.json",
+        "apple-touch-icon.png",
+        "apple-touch-icon-precomposed.png",
+        "favicon.ico"
     ],
     "disable_catalog": [ // Hide these files to the web page
         "img",
@@ -113,10 +119,7 @@ If you want to reinitialize, please enter "wdgx -i -f"
     "markdown": { // Blog function(Hexo) https://hexo.io/docs/front-matter
         "YN": false, // Whether to enable markdown parameter
         "layout": false, // false or "string"
-        "title": {
-            "title": false, // false or "string"
-            "cttp": false // false or "string"     Whether to change the website title
-        },
+        "title": false, //false or "string" id
         "img": {
             "img": false, // false or "string"
             "file": "/img/background.png" // "string"
@@ -131,34 +134,6 @@ If you want to reinitialize, please enter "wdgx -i -f"
 }
 ```
 
-### liststyle
-
-```html
-<td><a class="tname" href="">name</a></td><td><a class="tt">time</a></td>
-```
-
-This is the HTML added to the list
-
-Now the file name uses the css "tname'  
-the file last update time uses the css "tt'
-
-You can customize it (We require it to be filled in),like:
-
-```json
-{
-    "liststyle":{
-        "Name": "filename",
-        "date": "filetime"
-    },
-}
-```
-
-HTML will become
-
-```html
-<td><a class="filename" href="">name</a></td><td><a class="filetime">time</a></td>
-```
-
 ### pd
 
 means Parent directory
@@ -167,45 +142,11 @@ effect:
 
 ![effect](img/4-1.png)
 
-### Differences between cttp and hcttp
-
-#### cttp
+### changewebsitetitle
 
 ![path:/](img/1-1.png)
 
 ![path:/wuhaneduyun](img/1-2.png)
-
-#### hcttp
-
-![path:/](img/2-1.png)
-
-![path:/wuhaneduyun](img/2-2.png)
-
-#### How to config cttp and hcttp
-
-![cttp](img/3-1.png)
-
-```json
-{
-    "cttp": "title",
-}
-// If you don't want to use it
-{
-    "cttp": false
-}
-```
-
-![hcttp](img/3-2.png)
-
-```json
-{
-    "hcttp": "htitle"
-}
-// If you don't want to use it
-{
-    "hcttp": false
-}
-```
 
 ### disable_index and disable_catalog
 

@@ -1,14 +1,12 @@
 {
     "path": "./",
     "suffix": "html",
-    "cttp": false,
-    "hcttp": false,
+    "changewebsitetitle": [
+        "direct"
+    ],
     "pd": true,
     "e_html": "./e.html",
-    "liststyle":{
-        "Name": "tname",
-        "date": "tt"
-    },
+    "html": "<td><a class=\"filename\" href=\"{0}\"> {1} '</a></td><td><a class=\"mtime\">'{2}'</a></td>",
     "disable_index": [
         "index.html",
         ".git",
@@ -24,22 +22,22 @@
         "package-lock.json",
         "LICENSE",
         ".gitignore",
-        "wdgX-config.json"
+        "wdgX-config.json",
+        "apple-touch-icon.png",
+        "apple-touch-icon-precomposed.png",
+        "favicon.ico"
     ],
     "disable_catalog": [
         "img",
-        "documents"
+        "doc"
     ],
     "change_title": {
         "img": "photos"
     },
     "markdown": {
-        "YN": true,
+        "YN": false,
         "layout": false,
-        "title": {
-            "title": false,
-            "cttp": true
-        },
+        "title": false,
         "img": {
             "img": false,
             "file": "/img/background.png"

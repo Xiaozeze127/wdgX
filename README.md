@@ -88,7 +88,7 @@ If you want to reinitialize, please enter "wdgx -i -f"
     ],
     "pd": true, // Display upper level folder
     "e_html": "./e.html", // Basic HTML
-    "html": "<td><a class=\"filename\" href=\"{0}\"> {1} '</a></td><td><a class=\"mtime\">'{2}'</a></td>", //HTML for custom lists
+    "html": "<td><a class=\"filename\" href=\"{0}\"> {1} '</a></td><td><a class=\"mtime\">'{2}'</a></td>", //HTML for custom lists. {0} auto replace url, {1} auto replace name, {2} auto replace to file change time
     "disable_index": [ // Do not generate these files to web pages
         "index.html",
         ".git",

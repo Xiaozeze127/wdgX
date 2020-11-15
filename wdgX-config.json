@@ -33,8 +33,12 @@
     ],
     "change_title": [
         {
-            "title": "",
-            "to": ""
+            "title": "img",
+            "to": "photo"
+        },
+        {
+            "title": "doc",
+            "to": "documents"
         }
     ],
     "markdown": {

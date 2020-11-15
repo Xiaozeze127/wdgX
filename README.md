@@ -122,9 +122,16 @@ If you want to reinitialize, please enter "wdgx -i -f"
         "img",
         "documents"
     ],
-    "change_title":{  // Switch the names of these files
-        "img": "photos"
-    },
+    "change_title": [ // Switch the names of these files
+        {
+            "title": "img",
+            "to": "photo"
+        },
+        {
+            "title": "doc",
+            "to": "documents"
+        }
+    ],
     "markdown": { // Blog function(Hexo) https://hexo.io/docs/front-matter
         "YN": false, // Whether to enable markdown parameter
         "layout": false, // false or "string"

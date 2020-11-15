@@ -11,6 +11,7 @@ It's like a mirror station
 
 - [wdgX](#wdgx)
   - [Version](#version)
+    - [4.1](#41)
     - [4.0](#40)
     - [3.0](#30)
     - [1.6](#16)
@@ -28,6 +29,14 @@ It's like a mirror station
   - [clean index.html](#clean-indexhtml)
 
 ## Version
+
+### 4.1
+
+Improved processing speed
+
+Change collocation method for change_title
+
+Support change_title to directory path
 
 ### 4.0
 

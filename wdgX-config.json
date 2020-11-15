@@ -31,9 +31,12 @@
         "img",
         "doc"
     ],
-    "change_title": {
-        "img": "photos"
-    },
+    "change_title": [
+        {
+            "title": "",
+            "to": ""
+        }
+    ],
     "markdown": {
         "YN": false,
         "layout": false,
